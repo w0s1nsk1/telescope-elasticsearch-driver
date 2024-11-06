@@ -31,11 +31,27 @@ class TelescopeIndex
     {
         $this->index = config('telescope-elasticsearch-driver.index');
         try {
-            $this->client = ClientBuilder::create()
-                ->setHosts([config('telescope-elasticsearch-driver.host')])
-                ->setBasicAuthentication(config('telescope-elasticsearch-driver.username'), config('telescope-elasticsearch-driver.password'))
-                ->build();
-        } catch (AuthenticationException $e) {
+            $client = ClientBuilder::create()
+                ->setHosts([config('telescope-elasticsearch-driver.host')]);
+
+            switch(config('telescope-elasticsearch-driver.auth.method')) {
+                case AuthMethod::BASIC:
+                    $client->setBasicAuthentication(
+                        config('telescope-elasticsearch-driver.auth.username'),
+                        config('telescope-elasticsearch-driver.auth.password')
+                    )->build();
+                    break;
+                case AuthMethod::API_KEY:
+                    $client->setApiKey(
+                        config('telescope-elasticsearch-driver.auth.api_key'),
+                    );
+                    break;
+                default:
+                    throw new AuthMethodUndefined();
+            }
+
+            $this->client = $client->build();
+        } catch (AuthenticationException|AuthMethodUndefined $e) {
             Log::error('[TelescopeElasticsearchDriver] Auth failure', ['message' => $e->getMessage()]);
         }
     }
