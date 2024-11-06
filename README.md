@@ -1,7 +1,7 @@
-# Enables you to use Elasticsearch for telescope so it does NOT use relational database
+# Enables you to use Elasticsearch for telescope, so it does NOT use relational database
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/saman-jafari/telescope-elasticsearch-driver.svg?style=flat-square)](https://packagist.org/packages/w0s1nsk1/telescope-elasticsearch-driver)
-[![Total Downloads](https://img.shields.io/packagist/dt/w0s1nsk1/telescope-elasticsearch-driver.svg?style=flat-square)](https://packagist.org/packages/saman-jafari/telescope-elasticsearch-driver)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/w0s1nsk1/telescope-elasticsearch-driver.svg?style=flat-square)](https://packagist.org/packages/w0s1nsk1/telescope-elasticsearch-driver)
+[![Total Downloads](https://img.shields.io/packagist/dt/w0s1nsk1/telescope-elasticsearch-driver.svg?style=flat-square)](https://packagist.org/packages/w0s1nsk1/telescope-elasticsearch-driver)
 
 it will allow you to switch from sql database to elasticsearch as driver for your data storage, and it will eliminate the deadlock so it makes telescope a ready for production logging system.
 ## Prerequisite
@@ -14,7 +14,7 @@ it will allow you to switch from sql database to elasticsearch as driver for you
 You can install the package via composer:
 
 ```bash
-composer require saman-jafari/telescope-elasticsearch-driver
+composer require w0s1nsk1/telescope-elasticsearch-driver
 ```
 
 ## Usage
@@ -49,12 +49,12 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email isaimon@me.com instead of using the issue tracker.
+If you discover any security related issues, please email tomek12wosin@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 -   [W0s1nsk1](https://github.com/w0s1nsk1)
--   [Saman Jafari](https://github.com/saman-jafari)
+-   [Saman Jafari](https://github.com/w0s1nsk1)
 -   [All Contributors](../../contributors)
 
 ## License

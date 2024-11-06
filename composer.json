@@ -15,18 +15,18 @@
     "type": "library",
     "authors": [
         {
-            "name": "Saman Jafari",
-            "email": "isaimon@me.com",
+            "name": "W0s1nsk1",
+            "email": "tomek12wosin@gmail.com",
             "role": "Developer"
         },
         {
-            "name": "W0s1nsk1",
-            "email": "tomek12wosin@gmail.com",
+            "name": "Saman Jafari",
+            "email": "isaimon@me.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "laravel/telescope": "^v5.0",
         "elasticsearch/elasticsearch": "^v8.8.0"
     },
@@ -34,10 +34,6 @@
         "psr-4": {
             "W0s1nsk1\\TelescopeElasticsearchDriver\\": "src"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true,
