@@ -1,8 +1,8 @@
 <?php
 
-namespace SamanJafari\TelescopeElasticsearchDriver;
+namespace W0s1nsk1\TelescopeElasticsearchDriver;
 
-use SamanJafari\TelescopeElasticsearchDriver\ElasticsearchEntriesRepository;
+use W0s1nsk1\TelescopeElasticsearchDriver\ElasticsearchEntriesRepository;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Telescope\Contracts\ClearableRepository;
 use Laravel\Telescope\Contracts\EntriesRepository;

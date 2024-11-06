@@ -1,22 +1,27 @@
 {
     "version": "2.0.1",
-    "name": "saman-jafari/telescope-elasticsearch-driver",
+    "name": "w0s1nsk1/telescope-elasticsearch-driver",
     "description": "it will allow you to switch from sql database to elasticsearch as driver for your data storage and it will eliminate the deadlock so it makes telescope a ready for production logging system.",
     "keywords": [
-        "saman-jafari",
+        "w0s1nsk1",
         "telescope-elasticsearch-driver",
         "telescope",
         "elasticsearch",
         "elasticsearch-driver",
         "laravel"
     ],
-    "homepage": "https://github.com/saman-jafari/telescope-elasticsearch-driver",
+    "homepage": "https://github.com/w0s1nsk1/telescope-elasticsearch-driver",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Saman Jafari",
             "email": "isaimon@me.com",
+            "role": "Developer"
+        },
+        {
+            "name": "W0s1nsk1",
+            "email": "tomek12wosin@gmail.com",
             "role": "Developer"
         }
     ],
@@ -27,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SamanJafari\\TelescopeElasticsearchDriver\\": "src"
+            "W0s1nsk1\\TelescopeElasticsearchDriver\\": "src"
         }
     },
     "scripts": {
@@ -35,12 +40,15 @@
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SamanJafari\\TelescopeElasticsearchDriver\\TelescopeElasticsearchDriverServiceProvider"
+                "W0s1nsk1\\TelescopeElasticsearchDriver\\TelescopeElasticsearchDriverServiceProvider"
             ]
         }
     }

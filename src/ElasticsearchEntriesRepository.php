@@ -1,6 +1,6 @@
 <?php
 
-namespace SamanJafari\TelescopeElasticsearchDriver;
+namespace W0s1nsk1\TelescopeElasticsearchDriver;
 
 use Carbon\Carbon;
 use DateTimeInterface;
