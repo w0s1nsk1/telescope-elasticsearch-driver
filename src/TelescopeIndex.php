@@ -36,7 +36,7 @@ class TelescopeIndex
                 ->setBasicAuthentication(config('telescope-elasticsearch-driver.username'), config('telescope-elasticsearch-driver.password'))
                 ->build();
         } catch (AuthenticationException $e) {
-            Log::error('auth failure', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] Auth failure', ['message' => $e->getMessage()]);
         }
     }
 
@@ -65,11 +65,11 @@ class TelescopeIndex
                 ],
             ]);
         } catch (ClientResponseException $e) {
-            Log::error('the 4xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 4xx error', ['message' => $e->getMessage()]);
         } catch (MissingParameterException $e) {
-            Log::error('the 5xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 5xx error', ['message' => $e->getMessage()]);
         } catch (ServerResponseException $e) {
-            Log::error('network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
         }
     }
 
@@ -131,11 +131,11 @@ class TelescopeIndex
                 'index' => $this->index,
             ]);
         } catch (ClientResponseException $e) {
-            Log::error('the 4xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 4xx error', ['message' => $e->getMessage()]);
         } catch (MissingParameterException $e) {
-            Log::error('the 5xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 5xx error', ['message' => $e->getMessage()]);
         } catch (ServerResponseException $e) {
-            Log::error('network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
         }
     }
 
@@ -149,11 +149,11 @@ class TelescopeIndex
                     'index' => $this->index,
                 ])->getStatusCode() !== 404;
         } catch (ClientResponseException $e) {
-            Log::error('the 4xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 4xx error', ['message' => $e->getMessage()]);
         } catch (MissingParameterException $e) {
-            Log::error('the 5xx error', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] the 5xx error', ['message' => $e->getMessage()]);
         } catch (ServerResponseException $e) {
-            Log::error('network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
+            Log::error('[TelescopeElasticsearchDriver] network error like NoNodeAvailableException', ['message' => $e->getMessage()]);
         }
     }
 }
